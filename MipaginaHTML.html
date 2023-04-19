@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head><h1>Soy la cabeza
+		<meta charset = "utf-8" />
+		<title>Soy el título </title>
+		<style>
+		.lineal	{
+				width: 100%;
+				height: 200px;
+				background: linear-gradient(red, yellow, blue, green);
+				}	
+		</style>
+		<script type = "text/javascript">
+			//Visualiza mensaje de bienvenida
+			alert("Esta es una alerta de javascript");
+			//Guarda variable ingresada y la muestra
+			var variable;
+			variable = prompt("Escribe tu nombre", "NOMBRE");
+			while(variable != "Ivan"){
+				variable = prompt("Escribe tu nombre", "NOMBRE");
+			}	
+			alert("Tu nombre es: " + variable); //Esta es una concatenacion (+)
+			//FUNCIONES
+			//Funcion para mostrar confirmación
+			function confirmar(){
+				return confirm("Esta pagina te redigirá, ¿deseas continuar?");
+			}
+
+			//Función para mostrar la hora
+			function verHora(){
+				var miHora = new Date();
+				var horas = miHora.getHours().toString();
+				if(horas.length == 1) horas = "0" + horas;
+				var minutos = miHora.getMinutes().toString();
+				if(minutos.length == 1) minutos = "0" + minutos;
+				var segundos = miHora.getSeconds().toString();
+				if(segundos.length == 1) segundos = "0" + segundos;
+
+				document.forms[0].miReloj.value = horas + " : " + minutos + " : " + segundos;
+			}
+
+
+		</script>
+
+
+	</h1></head>
+	<body>
+		<form>
+		<div class="lineal">*</div>
+			<p><center>
+				<b><br>Cien años de soledad</br></b>
+					<table>
+						<tr>
+							<td>
+								Trata un siglo en la vida de la familia Buendía, 
+								cuyo patriarca, José Arcadio Buendía, fundó el pueblo ficticio de Macondo, 
+								en Colombia. La novela es considerada una obra maestra de la literatura latinoamericana
+								y uno de los ejemplos clásicos del realismo mágico.
+							</td>
+						</tr>
+					</table>
+			</center></p>
+			<img src="D:\MyDesktop\OCTAVO SEMESTRE\LENGUAJES DE INTERNET\Ivan Perez\4CC34NEJ2JGDVKFT6UKOPABAPE.jpg">
+
+			<a href="https://www.youtube.com/" onclick = "return confirmar()">Abrir YouTube</a>
+			<input type = "text" name = "miReloj" id = "miReloj" size = "10">
+		</form>
+		<script>
+			var r = setInterval("verHora()",500);
+		</script>
+	</body>
+	
+</html>
