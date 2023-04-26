@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Examen</title>
+    <style>
+        .opacidad{
+            opacity: 0.5;
+        }
+    </style>
+    <script>
+        function confirmar(){
+            return confirm("¿Estas seguro que deseas salir de la página?")
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div class="opacidad">
+            <center><img src="LogoEsime.png" width="40%" height="350px"></center>
+        </div>
+        <center><h1>Catalogo de Sitios Web</h1></center>
+        <center><table border="1">
+            <tr>
+                <td><h2>Nombre de la página Web</h2></td>
+                <td><h2>Aqui sinopsis de la pagina web</h2></td>
+                <td><h2>Link para ir a la pagina web</h2></td>
+            </tr>
+            <tr>
+                <td>Youtube</td>
+                <td>Sitio web de origen estadounidense dedicado a compartir videos.</td>
+                <td><a href="https://www.youtube.com/" onclick="return confirmar()">Abrir Youtube</a></td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>Una red de vínculos virtuales, cuyo principal objetivo es dar un soporte para producir y compartir contenidos.</td>
+                <td><a href="https://www.facebook.com/" onclick="return confirmar()">Abrir Facebook</a></td>
+            </tr>
+            <tr>
+                <td>Linkedin</td>
+                <td>Una red de vínculos virtuales, cuyo principal objetivo es dar un soporte para producir y compartir contenidos.</td>
+                <td><a href="https://www.facebook.com/" onclick="return confirmar()">Abrir Facebook</a></td>
+            </tr>
+        </table></center>
+    </form>
+</body>
+</html>

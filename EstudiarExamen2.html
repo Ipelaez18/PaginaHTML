@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Prueba de examen</title>
         <style>
             .lineal{
                 width: 100%;
-                height: 200px;
+                height: 100px;
                 background: linear-gradient(black, red, purple, blue, turquoise, white);
             }
         </style>
+        <script text="text/javascript">
+            alert("¡Buenos dias!")
+            var nombre = prompt("Introduce tu nombre :3 ", "Nombre")
+            alert("Tu nombre es: " + nombre)
+
+            function salida(){
+                return confirm("¿Estás seguro que quieres salir?");
+            }
+            function horaSpain(){
+                var sTime = new Date();
+                var sHora = sTime.getHours().toString();
+                var sMinut = sTime.getMinutes().toString();
+                var sSegun = sTime.getSeconds().toString();
+                if(sHora.length == 1) sHora = "0" + sHora;
+                if(sMinut.length == 1) sMinut = "0" + sMinut;
+                if(sSegun.length == 1) sSegun = "0" + sSegun;
+
+                document.forms[0].SpainTime.value = sHora + " : " + sMinut + " : " + sSegun;
+            }
+        </script>
     </head>
     <body>
         <form>
             <h1>Aqui empieza la pagina</h1>
-            <div class = "lienal">/</div>
+            <h2>Este es un linear-gradient</h2>
+            <div class = "lineal"></div>
+            <h2>Esta es una foto de Goku</h2>
+            <img src="Goku.jpg">
+            <h2>Esta es una tabla con columnas</h2>
+            <table>
+                <tr>
+                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni minus accusamus ea recusandae impedit perspiciatis repellat aspernatur ullam itaque modi a illo beatae, aliquid minima vitae officiis, in eaque cumque?</td>
+                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure itaque dignissimos blanditiis? Accusantium fuga ea voluptatem quo nostrum, error, sit placeat corrupti a tenetur, libero vel odit quae ullam.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repellat necessitatibus beatae aliquid eius quas esse, eum dolorum debitis labore ad earum id repudiandae adipisci corrupti, culpa deleniti exercitationem optio.</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem nisi quis, officiis impedit recusandae? Eligendi corporis enim ipsum voluptatibus ullam obcaecati totam dicta, delectus saepe et tempore recusandae unde!</td>
+                </tr>
+            </table>
+            <h2>Aqui te redirigen</h2>
+            <a href="https://www.saes.esimez.ipn.mx/" onclick="return salida()">Ir al SAES</a>
+            <h2>Aqui veras la hora actual</h2>
+            <input type="text" name="SpainTime" id="SpainTime" size="6">
         </form>
+        <script>
+            var s = setInterval("horaSpain()", 500)
+        </script>
     </body>
 </html>
